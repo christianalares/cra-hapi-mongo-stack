@@ -1,0 +1,1 @@
+## A starting boilerplate with create-react-app, Hapi JS and MongoDB
