@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon",
+    "client": "npm run start --prefix \"../client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^3.5.0",
+    "hapi": "^16.6.2",
+    "mongoose": "^4.12.4",
+    "nodemon": "^1.12.1"
+  }
+}
