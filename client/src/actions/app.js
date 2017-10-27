@@ -1,5 +1,4 @@
 export const postMessage = (incomingMessage) => async (dispatch) => {
-	// console.time('postMessage')
 
 	const message = await fetch('/api/message', {
 		headers: {
@@ -10,13 +9,12 @@ export const postMessage = (incomingMessage) => async (dispatch) => {
 	}).then( response => response.json() )
 
 	dispatch({
-		type: 'POST_MESSAGE',
-		payload: message
+		type: 'SET_MESSAGES',
+		payload: [message]
 	})
 }
 
 export const getMessages = () => async (dispatch) => {
-	console.time('getMessages')
 
 	const messages = await fetch('/api/messages', {
 		method: 'GET'
